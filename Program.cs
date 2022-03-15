@@ -59,7 +59,7 @@ namespace firstConsoleApp_basketballStats
                         string made = AskTwo("How many shots have been made?");
                         p.ShotsMade = int.Parse(made);
                       
-                        //return Console.ReadLine();
+                   
                         Console.WriteLine($"The field goal percentage is {(p.percentage * 100).ToString("##.##")}%");
 
                         playerNames.Add(p);
@@ -67,9 +67,12 @@ namespace firstConsoleApp_basketballStats
                         break;
                     case "2":
                         Console.WriteLine($"There are {playerNames.Count} players on the team.");
-                        //foreach (Player in playerNames)
-                        Console.WriteLine($"Player: {playerNames}");
 
+                        foreach (Player player in playerNames)
+                        {
+
+                            Console.WriteLine($"Player: {player.Name} made {player.ShotsMade} shots out of {player.ShotsAttempted} for { (player.percentage *100).ToString("##.#")}%.");
+                        }
                         break;
                     case "3":
                         exitLoop = true;

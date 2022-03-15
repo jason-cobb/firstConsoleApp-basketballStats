@@ -14,14 +14,14 @@
 
         public double percentage { get { return (Convert.ToDouble(ShotsMade) / Convert.ToDouble(ShotsAttempted)); } }
 
-        public bool Save()
-        { return true; 
-        }
+       // public bool Save()
+        //{ return true; 
+        //}
 
-        public List<Player> Retrieve()
+        /*public List<Player> Retrieve()
         { return new List<Player>(); 
         }
-
+        */
 
     }
 }
