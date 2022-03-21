@@ -6,8 +6,7 @@ namespace firstConsoleApp_basketballStats
     {
         static void Main(string[] args)
         {
-            // Team team = new Team();
-            //Player player = new Player();
+          
             bool exitLoop = false;
           
             
@@ -39,7 +38,7 @@ namespace firstConsoleApp_basketballStats
             Console.WriteLine("Welcome to the sports statistics app!");
             do
             {
-                Console.WriteLine("Please Enter Menu Number Below");
+                Console.WriteLine("Please Enter Menu Number and Press Return");
                 Console.WriteLine("1 Enter Player Information");
                 Console.WriteLine("2 Display Player Information");
                 Console.WriteLine("3 Exit");
@@ -107,16 +106,5 @@ namespace firstConsoleApp_basketballStats
     }
 }
 
-//Console.WriteLine(fieldGoalPercentage(shotsMade, shotsTaken));
-//Console.WriteLine(fieldGoalPercentage(8, 10));
 
-//    Static double freeThrowPercentage
-//            Static double threePointPercentage
-//            ? use
-//            public interface IShotPercentage
-//    {
-
-//    }
-
-//}
 
