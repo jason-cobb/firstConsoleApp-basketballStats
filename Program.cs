@@ -41,7 +41,7 @@ namespace firstConsoleApp_basketballStats
                 Console.WriteLine("");
                 Console.WriteLine("Please Enter Menu Number and Press Return");
                 Console.WriteLine("1 Enter Player Information");
-                Console.WriteLine("2 Display Player Information");
+                Console.WriteLine("2 Display All Players' Shot Data");
                 Console.WriteLine("3 Exit");
                 var menuSelection = Console.ReadLine();
 
@@ -50,17 +50,33 @@ namespace firstConsoleApp_basketballStats
                     case "1":
                         Player p = new Player();
 
-                        string lastName = AskName("What is the player's last name?");
+                        string lastName = AskName("What is the player's last name or player number?");
                         p.Name = lastName;
 
                         string taken = Ask("How many shots have been taken?");
-                        p.ShotsAttempted = int.Parse(taken);
+                        
+                        try
+                        {
+                            p.ShotsAttempted = int.Parse(taken);
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Use numeric values for shots, complete shots made, then enter option 1 again and use numeric values for shots");
+                        }
+                      
                       
                         string made = AskTwo("How many shots have been made?");
-                        p.ShotsMade = int.Parse(made);
-
+                        try
+                        {
+                            p.ShotsMade = int.Parse(made);
+                        }
+                        catch
+                        {
+                            Console.WriteLine("Use numeric values for shots, complete this section, then enter option 1 again and use numeric values for shots");
+                        }
+                        
                         Console.WriteLine("");
-                        Console.WriteLine($"The field goal percentage is {(p.percentage * 100).ToString("##.##")}%");
+                        Console.WriteLine($"The field goal percentage is {(p.percentage * 100).ToString("##.#")}%");
 
                         playerNames.Add(p);
 
