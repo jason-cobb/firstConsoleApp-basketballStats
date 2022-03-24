@@ -45,7 +45,8 @@ namespace firstConsoleApp_basketballStats
                 Console.WriteLine("3 Exit");
                 var menuSelection = Console.ReadLine();
 
-                switch(menuSelection){
+                switch (menuSelection)
+                {
 
                     case "1":
                         Player p = new Player();
